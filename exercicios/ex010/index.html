@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>
+        Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no GitHub</a></p>
+    <!-- a de ancora (para colocar link) sobrepor repositório, quando for link externo recomenda colocar o target blank e rel (PARA CRIAR UMA NOVA ABA E NÃO SOBREPOR O SITE IMPORTANTEEEE)-->
+    <p>
+        Você também pode acessaro meu <a href="https://www.youtube.com/" target="_blank" rel="external">canal gratuito no YouTube</a>
+    </p>   
+    
+    <h1>Usando links internos</h1>
+    <!-- Outra pasta que está dentro do nosso servidor -->
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar tambem a minha <a href="pag002.html" rel="next" target="_self">segunda página</a></p>
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" rel="next" target="_self">página de notícias</a></p>
+    <!-- sempre bom por REL=NEXT para informar que é a proxima página o TARGET=_SELF faz abrir o link na mesma página (interessante para abrir coisas do mesmo site)vc pode não colocar nada mas para o código ficar mais certinho bota o self sim-->
+    
+    <h1>Links para Abrir Arquivos</h1>
+    <ul>
+        <li><a href="livro/aula10.pdf">Abrir o livro em PDF</a></li> <!-- isso daqui faz só abrir o arquivo em pdf E NÃO BAIXAR-->
+    </ul>
+
+    <h1>Links para Download</h1>
+    <ul>
+        <li><a href="livro/aula10.pdf" target="_blank" download="aula10.pdf" type="application/pdf">Baixar o livro em PDF</a></li> 
+        <li><a href="livro/aula10.rar" download="aula10.zip" type="application/zip">Baixar compactado em ZIP</a></li>
+        <!-- para ver o midea tipe que é o FORMATO DO ARQUIVO voce entra no site que tem no PDF dessa aula e la vc ve todos os tipos de arquivo e o que vc tem que colocar no type="" -->
+    </ul>
+</body>
+</html>

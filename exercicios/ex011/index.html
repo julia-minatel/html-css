@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <!-- Trocar sempre o min para MAX e colocar o valor das imagens no px, tem que sermpre ser do menor para maior, então começa com a P até a IMG G -->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <!-- Tamanho máximo sendo 1050 voce carrega a foto M, carrega a foto grande mas se for menor que 1050px vai carregar a imagem M, da pra testar no navegador aumentando e diminuindo a tela -->
+        <img src="imagens/foto-g.png" alt="Imágem Flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir audios em HTML5.</p>
+    <audio src="midia/Sand Castle - Quincas Moreira.mp3" controls autoplay></audio>
+    <!-- compativel com formato MP3 - WAV - OGG -->
+    <!-- o autoplay é começar a tocar logo que entra no site a musica porem o google tirou isso, e cabe ao usuario clicar se quer ouvir o audio ou não -->
+
+    <!-- Outra forma de fazer -->
+
+    <audio preload="metadata" controls loop>
+        <!-- Usar o prolad com metadata deixar o site mais leve, pois só vai fazer o download do audio quando a pessoa clicar no PLAY -->
+        <!-- loop quando chegar no final do audio ele recomeça -->
+        <source src="midia/Sand Castle - Quincas Moreira.mp3" type="audio/mpeg">
+        <source src="midia/Sand Castle - Quincas Moreira.ogg" type="audio/ogg">
+        <source src="midia/Sand Castle - Quincas Moreira.wav" type="audio/wav"> <!-- tentar evitar arquivo WAV pq é mt pesado-->
+        <!-- esses sources fazem o audio tentar ser carregado primeiro em mp3, depois oss e depois wav, dependendo do navegador é zuado -->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/Sand Castle - Quincas Moreira.mp3">Clique aqui para baixar o arquivo</a></p>
+    </audio>
+</body>
+</html>
